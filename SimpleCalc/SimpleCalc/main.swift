@@ -25,11 +25,6 @@ func convert(incoming:String) -> Int {
     return NSFormatter().numberFromString(incoming)!.integerValue
 }*/
 
-var expression = input() // first thing user typed
-var val1: Double! = 0 //storage value for simple calculation
-var val2: Double! = 0 //storage value for simple calculation
-var op = "" //stored operator
-
 //calculates addition
 func add(currentSum:Double!, newVal:Double!) -> Double {
     return currentSum + newVal
@@ -49,6 +44,18 @@ func divide(currentSum:Double!, newVal:Double!) -> Double {
 func multiply(currentSum:Double!, newVal:Double!) -> Double {
     return currentSum * newVal
 }
+
+print()
+print("Need me to calculate something?")
+
+var response = input()
+
+while response.lowercaseString.containsString("y") {
+
+var expression = input() // first thing user typed
+var val1: Double! = 0 //storage value for simple calculation
+var val2: Double! = 0 //storage value for simple calculation
+var op = "" //stored operator
 
 // calculations for non-basic functions
 if expression.containsString(" ") {
@@ -122,4 +129,8 @@ if expression.containsString(" ") {
     } else { // operator given wasn't standard
         print("I don't know what you want from me ;-;")
     }
+}
+    print()
+    print("Need me to calculate something?")
+    response = input()
 }
