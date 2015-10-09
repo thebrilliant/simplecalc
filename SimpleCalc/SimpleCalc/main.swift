@@ -45,7 +45,7 @@ func multiply(currentSum:Double!, newVal:Double!) -> Double {
     return currentSum * newVal
 }
 
-print()
+print("")
 print("Need me to calculate something?")
 
 var response = input()
@@ -126,11 +126,15 @@ if expression.containsString(" ") {
         }
     } else if op == "*" {
         print(multiply(val1, newVal: val2))
+    } else if op == "%" {
+        print(val1 % val2)
     } else { // operator given wasn't standard
         print("I don't know what you want from me ;-;")
     }
 }
-    print()
+    print("")
     print("Need me to calculate something?")
     response = input()
 }
+
+print("See you next water time!")
